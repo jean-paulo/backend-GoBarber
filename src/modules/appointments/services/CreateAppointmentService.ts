@@ -30,13 +30,10 @@ class CreateAppointmentService {
         }
 
         // se estiver disponível ele cria e retorna o appointment -> ele cria mas não salva no banco de dados
-        const appointment = appointmentsRepository.create({
+        const appointment = await appointmentsRepository.create({
             provider_id,
             date: appointmentDate,
         });
-
-        // salva o registro no banco de dados
-        await appointmentsRepository.save(appointment);
 
         return appointment;
     }
