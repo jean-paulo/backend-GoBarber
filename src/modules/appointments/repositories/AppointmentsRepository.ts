@@ -1,5 +1,5 @@
 import { EntityRepository, Repository } from 'typeorm';
-import Appointment from '../entities/Appointment';
+import Appointment from '../infra/typeorm/entities/Appointment';
 
 // Passamos o model como parametro para o decorator e para a interface Repository
 @EntityRepository(Appointment)
