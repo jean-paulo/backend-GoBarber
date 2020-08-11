@@ -8,6 +8,9 @@ import './providers';
 import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 
+// import UserTokensRepository from '@modules/users/infra/typeorm/repositories/UserTokensRepository';
+// import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
+
 // singleton é diferente do register, o register instanciaria varias vezes o singleton uma vez só e todos que precisarem usam a mesma instancia
 // o nome que você quer dar ao repositório e o nome do repositório que ele referencia
 container.registerSingleton<IAppointmentsRepository>(
