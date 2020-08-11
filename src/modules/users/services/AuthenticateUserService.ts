@@ -2,7 +2,7 @@ import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 import authConfig from '@config/auth';
-
+import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '@shared/errors/AppError';

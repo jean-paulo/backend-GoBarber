@@ -1,5 +1,6 @@
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import { hash } from 'bcryptjs';
+import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '@shared/errors/AppError';

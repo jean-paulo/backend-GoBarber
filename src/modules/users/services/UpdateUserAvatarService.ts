@@ -2,6 +2,7 @@ import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import path from 'path';
 import fs from 'fs';
 import uploadConfig from '@config/upload';
+import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '@shared/errors/AppError';
