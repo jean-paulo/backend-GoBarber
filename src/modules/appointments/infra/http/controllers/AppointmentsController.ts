@@ -9,8 +9,9 @@ export default class AppointmentsController {
         request: Request,
         response: Response,
     ): Promise<Response> {
+        // pega o id do usuário que está logado
+        const user_id = request.user.id;
         // pega de dentro do request.body os dados que o usuario vai utilizar para criar um novo agendamento
-
         const { provider_id, date } = request.body;
 
         const parsedDate = parseISO(date);
@@ -20,6 +21,7 @@ export default class AppointmentsController {
         const appointment = await createAppointment.execute({
             date: parsedDate,
             provider_id,
+            user_id,
         });
         return response.json(appointment);
     }
