@@ -11,7 +11,7 @@ const profileController = new ProfileController();
 // Garante que todas as rotas não sejam acessíveis se o usuário não estiver logado
 profileRouter.use(ensureAuthenticated);
 
-profileRouter.get('/', profileController.update);
+profileRouter.get('/', profileController.show);
 profileRouter.put(
     '/',
     celebrate({
@@ -25,7 +25,7 @@ profileRouter.put(
                 .valid(Joi.ref('password')),
         },
     }),
-    profileController.show,
+    profileController.update,
 );
 
 export default profileRouter;
