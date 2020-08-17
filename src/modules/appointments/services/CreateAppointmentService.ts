@@ -54,6 +54,7 @@ class CreateAppointmentService {
         // verifica se o appointment está disponivel
         const findAppointmentInSameDate = await this.appointmentsRepository.findByDate(
             appointmentDate,
+            provider_id,
         );
 
         // se não estiver ele devolve um erro
