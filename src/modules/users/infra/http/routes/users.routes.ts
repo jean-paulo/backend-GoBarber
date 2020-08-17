@@ -12,7 +12,7 @@ const usersController = new UsersController();
 const userAvatarController = new UserAvatarController();
 
 // instância do multer, dentro dele temos alguns métodos
-const upload = multer(uploadConfig);
+const upload = multer(uploadConfig.multer);
 
 usersRouter.post(
     '/',
